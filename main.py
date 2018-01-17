@@ -1,7 +1,21 @@
-import csv
 import os
+import platform
 
-desktop_file = os.path.expanduser('~\Desktop\EGPA.txt')
+
+def setup():
+    sys = platform.system().upper()
+    print(sys)
+    desktop_file = 'null'
+    if sys == 'WINDOWS':
+        desktop_file = os.path.expanduser('~\Desktop\EGPA.txt')
+    elif'OSX':
+        desktop_file = os.path.expanduser('~\Desktop\EGPA.txt')
+    elif'LINUX':
+        desktop_file = os.path.expanduser('~\Home\EGPA.txt')
+    return desktop_file
+
+
+df = setup()
 
 
 def convert(score):
@@ -9,12 +23,12 @@ def convert(score):
     # Don't forget to cast it as a float.. and then a string again when printing. :(
     score = float(score / 800 * 4)
     print("Your High school equivalent GPA is: " + str(score) + "!")
-    dataOut(str(score) + ' Equivalent GPA.')
+    data_out(str(score) + ' Equivalent GPA.')
 
 
-def dataOut(data_in):
+def data_out(data_in):
     data = data_in
-    file = open(desktop_file, 'w+')
+    file = open(df, 'w+')
     # file = open('EGPA.txt', 'w+')
     file.write(data)
     file.close()

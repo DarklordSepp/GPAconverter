@@ -61,12 +61,6 @@ ssScore = chequ("Now Social Studies: ")
 langScore = chequ("and Language arts: ")
 sciScore = chequ("finally your Science score: ")
 
-# This wouldn't be needed in Java, but Python doesn't seem to like typecasting.
-# There really has to be a better way.
-mathScore = int(mathScore)
-ssScore = int(ssScore)
-langScore = int(langScore)
-sciScore = int(sciScore)
 total = mathScore + ssScore + langScore + sciScore
 tOut = total
 total = str(total)

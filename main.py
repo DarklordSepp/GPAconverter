@@ -1,4 +1,6 @@
 import csv
+import os
+desktop_file = os.path.expanduser('~\Desktop\EGPA.txt')
 
 def convert(score):
     score = score
@@ -11,9 +13,8 @@ def convert(score):
 
 def dataOut(pas_one):
     data = pas_one
-    # TODO Find out how to get this working
-    # file = open('~\Desktop\EGPA.txt', 'w+')
-    file = open('EGPA.txt', 'w+')
+    file = open(desktop_file, 'w+')
+    # file = open('EGPA.txt', 'w+')
     file.write(data)
     file.close()
 

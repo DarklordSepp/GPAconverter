@@ -6,11 +6,12 @@ def convert(score):
     score = float(score / 800)
     score = score * 4
     print("Your High school equivalent GPA is: " + str(score) + "!")
+    dataOut(str(score) + ' Equivalent GPA.')
 
 
 def dataOut(pas_one):
     data = pas_one
-    file = open('test.txt', 'w+')
+    file = open('EGPA.txt', 'w+')
     file.write(data)
     file.close()
 
@@ -34,7 +35,7 @@ total = mathScore + ssScore + langScore + sciScore
 tOut = total
 total = str(total)
 
-dataOut(total)
+
 print("That's " + total + ". Congratulations!")
 
 convert(tOut)

@@ -1,18 +1,19 @@
 import csv
 import os
+
 desktop_file = os.path.expanduser('~\Desktop\EGPA.txt')
+
 
 def convert(score):
     score = score
     # Don't forget to cast it as a float.. and then a string again when printing. :(
-    score = float(score / 800)
-    score = score * 4
+    score = float(score / 800 * 4)
     print("Your High school equivalent GPA is: " + str(score) + "!")
     dataOut(str(score) + ' Equivalent GPA.')
 
 
-def dataOut(pas_one):
-    data = pas_one
+def dataOut(data_in):
+    data = data_in
     file = open(desktop_file, 'w+')
     # file = open('EGPA.txt', 'w+')
     file.write(data)
@@ -25,9 +26,6 @@ ssScore = input("Now Social Studies: ")
 langScore = input("and Language arts: ")
 sciScore = input("finally your Science score: ")
 
-
-
-
 # This wouldn't be needed in Java, but Python doesn't seem to like typecasting.
 # There really has to be a better way.
 mathScore = int(mathScore)
@@ -38,9 +36,7 @@ total = mathScore + ssScore + langScore + sciScore
 tOut = total
 total = str(total)
 
-
 print("That's " + total + ". Congratulations!")
-
 convert(tOut)
 
 # Java > Python but I'm learning it anyway. I suppose this is my first python program.

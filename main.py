@@ -11,6 +11,8 @@ def convert(score):
 
 def dataOut(pas_one):
     data = pas_one
+    # TODO Find out how to get this working
+    # file = open('~\Desktop\EGPA.txt', 'w+')
     file = open('EGPA.txt', 'w+')
     file.write(data)
     file.close()

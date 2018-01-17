@@ -12,6 +12,8 @@ def setup():
         desktop_file = os.path.expanduser('~\Desktop\EGPA.txt')
     elif 'LINUX':
         desktop_file = os.path.expanduser('~\Home\EGPA.txt')
+    else:
+        desktop_file = 'null'
     return desktop_file
 
 
@@ -22,16 +24,20 @@ def convert(score):
     score = score
     # Don't forget to cast it as a float.. and then a string again when printing. :(
     score = float(score / 800 * 4)
-    print("Your High school equivalent GPA is: " + str(score) + "!")
-    data_out(str(score) + ' Equivalent GPA.')
+    data_out(str(score))
 
 
 def data_out(data_in):
-    data = data_in
-    file = open(df, 'w+')
-    # file = open('EGPA.txt', 'w+')
-    file.write(data)
-    file.close()
+    str_cngrts = 'Your High school equivalent GPA is '
+    data = str_cngrts + data_in
+    if df is not 'null':
+        file = open(df, 'w+')
+        # file = open('EGPA.txt', 'w+')
+        file.write(data)
+        file.close()
+        print(data)
+    else:
+        print(data)
 
 
 def chequ(str):
@@ -42,6 +48,7 @@ def chequ(str):
         try:
             data = int(input(str))
         except:
+            # noinspection PyStatementEffect
             ValueError
 
         if type(data) is not int:
@@ -60,7 +67,6 @@ mathScore = chequ("First enter your Math score: ")
 ssScore = chequ("Now Social Studies: ")
 langScore = chequ("and Language arts: ")
 sciScore = chequ("finally your Science score: ")
-
 total = mathScore + ssScore + langScore + sciScore
 tOut = total
 total = str(total)

@@ -1,3 +1,5 @@
+import csv
+
 def convert(score):
     score = score
     # Don't forget to cast it as a float.. and then a string again when printing. :(
@@ -6,15 +8,21 @@ def convert(score):
     print("Your High school equivalent GPA is: " + str(score) + "!")
 
 
-# IDK why this is here.
-# Todo Remove this.
-name = input("To get started enter your name: ")
-print("Hello" + " " + name)
+def dataOut(pas_one):
+    data = pas_one
+    file = open('test.txt', 'w+')
+    file.write(data)
+    file.close()
+
+
 # So cordial.
 mathScore = input("First enter your Math score: ")
 ssScore = input("Now Social Studies: ")
 langScore = input("and Language arts: ")
 sciScore = input("finally your Science score: ")
+
+
+
 
 # This wouldn't be needed in Java, but Python doesn't seem to like typecasting.
 # There really has to be a better way.
@@ -26,6 +34,7 @@ total = mathScore + ssScore + langScore + sciScore
 tOut = total
 total = str(total)
 
+dataOut(total)
 print("That's " + total + ". Congratulations!")
 
 convert(tOut)

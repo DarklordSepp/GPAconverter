@@ -1,8 +1,11 @@
 import os
 import platform
+import json
 
-
+with open('Strings.json', 'r') as strings_json:
+    Strings = json.load(strings_json)
 def setup():
+
     sys = platform.system().upper()
     print(sys)
     desktop_file = 'null'
@@ -28,8 +31,8 @@ def convert(score):
 
 
 def data_out(data_in):
-    str_cngrts = 'Your High school equivalent GPA is '
-    data = str_cngrts + data_in
+    # str_cngrts = 'Your High school equivalent GPA is '
+    data = Strings['cngrts'] + data_in
     if df is not 'null':
         file = open(df, 'w+')
         # file = open('EGPA.txt', 'w+')
@@ -52,21 +55,19 @@ def chequ(str):
             ValueError
 
         if type(data) is not int:
-            print('Integers only. Try again.')
-        elif data < 0:
-            print('Scores must be between 0 and 200')
-        elif data > 200:
-            print('Scores must be between 0 and 200')
+            print(Strings['entPls'])
+        elif data < 0 or data > 200:
+            print(Strings['range'])
         else:
             i = False
     return data
 
 
 # So cordial.
-mathScore = chequ("First enter your Math score: ")
-ssScore = chequ("Now Social Studies: ")
-langScore = chequ("and Language arts: ")
-sciScore = chequ("finally your Science score: ")
+mathScore = chequ(Strings['maths'])
+ssScore = chequ(Strings['ss'])
+langScore = chequ(Strings['lang'])
+sciScore = chequ(Strings['sci'])
 total = mathScore + ssScore + langScore + sciScore
 tOut = total
 total = str(total)

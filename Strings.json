@@ -1,0 +1,11 @@
+{
+  "desktopDir":"~/Desktop",
+  "homeDir":"~/Home",
+  "cngrts":"Your High school equivalent GPA is ",
+  "entPls":"Enter a valid integer value",
+  "range":"Enter an integer value between 0 and 200",
+  "maths":"First enter your Math score ",
+  "ss":"now Social Studies ",
+  "lang":"and Language Arts ",
+  "sci":"finally your Science score "
+}

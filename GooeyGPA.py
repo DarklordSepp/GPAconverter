@@ -21,6 +21,8 @@ class Form(QWidget):
 
 
 
+
+
         lblMath = QLabel('Math')
         lblSS = QLabel('Social Studies')
         lblLang = QLabel('Language Arts')
@@ -43,6 +45,8 @@ class Form(QWidget):
 
         self.setLayout(testlo)
         self.setWindowTitle('GooeyGPA')
+        self.setStyleSheet('background-color: rgb(255,255,0);')
+
 
     def mousePressEvent(self, event):
         self.oPos = event.globalPos()

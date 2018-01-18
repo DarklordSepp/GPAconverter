@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource>
+        <file alias="koro.png">res\path3703.png</file>
+    </qresource>
+</RCC>

@@ -21,6 +21,12 @@ class tClass(QMainWindow):
         self.setFixedSize(1000, 650)
         self.center()
 
+        # Playing with buttons
+        self.btnOne = QPushButton('Test')
+        btnLayout = QVBoxLayout()
+        btnLayout.addWidget(self.btnOne, 0,)
+
+
         # label
         # self.lbl = QLabel(self)
         # self.lbl.setText("test")
@@ -33,6 +39,7 @@ class tClass(QMainWindow):
         self.oldPos = self.pos()
 
         self.show()
+
 
     # center
     def center(self):
@@ -54,5 +61,7 @@ class tClass(QMainWindow):
 app = QApplication(sys.argv)
 app.setStyleSheet("QMainWindow{background-color: darkgray;border: 1px solid black}")
 
+
 ex = tClass()
 sys.exit(app.exec_())
+

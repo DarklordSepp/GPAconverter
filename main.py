@@ -2,9 +2,11 @@ import os
 import platform
 import json
 
-with open('Strings.json', 'r') as strings_json:
-    Strings = json.load(strings_json)
+
 def setup():
+    global Strings
+    with open('Strings.json', 'r') as strings_json:
+        Strings = json.load(strings_json)
 
     sys = platform.system().upper()
     print(sys)

@@ -1,9 +1,12 @@
 import os
 import platform
 import json
+import PyQt5
 
 
 def setup():
+
+
     global Strings
     with open('Strings.json', 'r') as strings_json:
         Strings = json.load(strings_json)

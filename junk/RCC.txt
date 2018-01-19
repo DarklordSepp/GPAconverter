@@ -1,0 +1,2 @@
+using to create a qt resource file first write it up as a qrc
+then run pyrcc5 -o <output> <input>

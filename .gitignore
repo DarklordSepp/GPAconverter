@@ -10,3 +10,4 @@ s.ipynb
 rtest2.py
 rtest.py
 rtest
+*.pyc

@@ -81,7 +81,7 @@ class windowFrame(QWidget):
 
         teMath = QLineEdit()
         VBox.addChildWidget(teMath)
-        teMath.setGeometry(90, 300, 250, 35)
+        teMath.setGeometry(90, 300, 350, 35)
         teMath.setPlaceholderText('Enter your Math score')
         teMath.setStyleSheet(
             '''
@@ -94,9 +94,35 @@ class windowFrame(QWidget):
 
         teSS = QLineEdit()
         VBox.addChildWidget(teSS)
-        teSS.setGeometry(90, 400, 250, 35)
+        teSS.setGeometry(90, 400, 350, 35)
         teSS.setPlaceholderText('Enter your Social Studies score')
         teSS.setStyleSheet(
+            '''
+            background-color: rgba(26,26,26,20%);
+            color: rgb(245,245,245);
+            border: 0px solid rgbs(0,0,0,0%)
+
+            '''
+        )
+
+        teLang = QLineEdit()
+        VBox.addChildWidget(teLang)
+        teLang.setGeometry(90, 500, 350, 35)
+        teLang.setPlaceholderText('Enter your Math score')
+        teLang.setStyleSheet(
+            '''
+            background-color: rgba(26,26,26,20%);
+            color: rgb(245,245,245);
+            border: 0px solid rgbs(0,0,0,0%)
+
+            '''
+        )
+
+        teSci = QLineEdit()
+        VBox.addChildWidget(teSci)
+        teSci.setGeometry(90, 600, 350, 35)
+        teSci.setPlaceholderText('Enter your Math score')
+        teSci.setStyleSheet(
             '''
             background-color: rgba(26,26,26,20%);
             color: rgb(245,245,245);

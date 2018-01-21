@@ -78,6 +78,33 @@ class windowFrame(QWidget):
         btn.clicked.connect(self.stubz)
         btn.setGeometry(32, 182, 20, 20)
 
+
+        teMath = QLineEdit()
+        VBox.addChildWidget(teMath)
+        teMath.setGeometry(90, 300, 250, 35)
+        teMath.setPlaceholderText('Enter your Math score')
+        teMath.setStyleSheet(
+            '''
+            background-color: rgba(26,26,26,20%);
+            color: rgb(245,245,245);
+            border: 0px solid rgbs(0,0,0,0%)
+            
+            '''
+        )
+
+        teSS = QLineEdit()
+        VBox.addChildWidget(teSS)
+        teSS.setGeometry(90, 400, 250, 35)
+        teSS.setPlaceholderText('Enter your Social Studies score')
+        teSS.setStyleSheet(
+            '''
+            background-color: rgba(26,26,26,20%);
+            color: rgb(245,245,245);
+            border: 0px solid rgbs(0,0,0,0%)
+
+            '''
+        )
+
         self.show()
 
     def stubz(self):
